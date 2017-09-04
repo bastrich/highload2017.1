@@ -1,5 +1,5 @@
 FROM bimgbily/centos-java:latest
 WORKDIR /root
-ADD libs/gs-rest-service-0.1.0.jar .
+ADD highload-all-1.0-SNAPSHOT.jar .
 EXPOSE 80
-CMD java -jar gs-rest-service-0.1.0.jar
+CMD java -jar highload-all-1.0-SNAPSHOT.jar -Xms4096m -Xmx4096m -XX:CompileThreshold=100 -XX:+UseConcMarkSweepGC
